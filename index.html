@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        background: #e3edf7;
+        
+      }
+      .icon {
+        width: 100px;
+        height: 100px;
+        border: 2px solid red;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
+        background-image: url(NCS.png);
+        background-position: center;
+        background-size: cover;
+      }
+      .drop {
+        margin: 50px auto;
+        width: 600px;
+      }
+      .drop li {
+        list-style: none;
+        width: 100%;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        background: #e3edf7;
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+          -6px -6px 10px -1px rgb(255, 255, 255, 0.7);
+      }
+      .drop li label {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      label::before {
+        content: "+";
+        margin-right: 10px;
+        font-size: 24px;
+        font-weight: bolder;
+      }
+      input[type="radio"] {
+        display: none;
+      }
+      .drop .content {
+        text-align: justify;
+        color: #555;
+        padding: 0 10px;
+        line-height: 26px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s, padding 0.5s;
+      }
+      .drop input[type="radio"]:checked + label + .content {
+        max-height: 400px;
+        padding: 10px 10px 20px;
+        overflow: auto;
+      }
+      .drop input[type="radio"]:checked + label::before {
+        content: "-";
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- icon right  -->
+    <a href="https://www.youtube.com/@NaseebCodeStudio" target="_blank"
+      ><div class="icon"></div
+    ></a>
+    <!-- ==================first drop================== -->
+    <ul class="drop">
+      <li>
+        <input type="radio" name="drop" id="first" />
+        <label for="first">Introduction To JS</label>
+        <div class="content">
+          <p>
+            <b>JavaScript</b> is a high-level, interpreted programming language
+            that is commonly used in web development to add interactivity and
+            dynamic behavior to websites. It is primarily known for its ability
+            to manipulate the content of web pages in real-time, allowing
+            developers to create interactive user interfaces, handle user input,
+            and communicate with web servers asynchronously.
+            <b>JavaScript</b> is supported by all major web browsers and has a
+            wide range of applications, including web development, server-side
+            development (Node.js), game development, and mobile app development.
+            <br>
+            <span style="color: red"
+              >Browsers are equipped with engines designed to interpret
+              JavaScript code. Following 2016, Ryan Dahl utilized C++ to develop
+              the Node.js runtime environment, which operates as a JavaScript
+              engine outside of the browser. Notable JavaScript engines include
+              V8 (used by Chrome and Node.js), SpiderMonkey (used by Firefox),
+              and JavaScriptCore (used by Safari).</span
+            > <br>
+            <b>JavaScript</b>is not like HTML and CSS it is case sensitive.
+            
+          </p>
+        </div>
+      </li>
+    </ul>
+
+    <!-- ==================second drop================== -->
+    <ul class="drop">
+      <li>
+        <input type="radio" name="drop" id="second" />
+        <label for="second" style="text-transform: capitalize"
+          >Difference b/w text editor, compiler, IDE and run time
+          environment</label
+        >
+        <div class="content">
+          <p>
+            Here's a brief explanation of the differences between text editors,
+            compilers, IDEs, and runtime environments: <br />
+
+            <b>1. Text Editor:</b> <br />
+            - A text editor is a software application used for creating and
+            editing plain text files. <br />
+            - Text editors are lightweight and primarily focused on editing
+            code, offering features such as syntax highlighting, code
+            indentation, and search/replace functionality. <br />
+            - Examples include Sublime Text, Visual Studio Code, Atom, and
+            Notepad++. <br />
+
+            <b>2. Compiler:</b> <br />
+            - A compiler is a software tool that translates source code written
+            in a high-level programming language into machine code or
+            intermediate code. <br />
+            - It converts the entire source code into an executable file or
+            another form that can be run by the computer's operating system.
+            <br />
+            - Compilers are commonly used in compiled languages like C, C++, and
+            Java. <br />
+            - Examples include GCC (GNU Compiler Collection), Clang, and
+            Microsoft Visual C++ Compiler. <br />
+
+            <b>3. Integrated Development Environment (IDE):</b> <br />
+            - An IDE is a software application that provides comprehensive tools
+            and features for software development in one integrated environment.
+            <br />
+            - It typically includes a text editor, compiler or interpreter,
+            debugger, and other tools for building, testing, and debugging
+            software. <br />
+            - IDEs often provide features like code completion, syntax checking,
+            and project management capabilities. <br />
+            - Examples include Visual Studio, IntelliJ IDEA, Eclipse, and Xcode.
+            <br />
+
+            <b>4. Runtime Environment:</b> <br />
+            - A runtime environment is a software framework that provides the
+            infrastructure for running and executing programs written in a
+            specific programming language. <br />
+            - It includes libraries, components, and tools necessary to execute
+            the code and manage resources during program execution. <br />
+            - Runtime environments can be specific to a programming language
+            (e.g., Java Runtime Environment for running Java programs) or a
+            platform (e.g., Node.js runtime environment for running JavaScript
+            outside the browser). <br />
+            - Examples include Java Runtime Environment (JRE), .NET Common
+            Language Runtime (CLR), and Node.js runtime. <br />
+          </p>
+        </div>
+      </li>
+    </ul>
+    <!-- ==================third drop================== -->
+    <ul class="drop">
+      <li>
+        <input type="radio" name="drop" id="third" />
+        <label for="third">JavaScript VS ECMAscript</label>
+        <div class="content">
+          <p>
+            JavaScript and ECMAScript (ES) are often used interchangeably, but
+            there are distinctions between the two: <br />
+
+            <b>JavaScript:</b> <br />
+            <b>1.</b> JavaScript is a programming language commonly used in web
+            development for creating interactive and dynamic content on
+            websites. <br />
+            <b>2.</b> It was initially developed by Netscape and first
+            introduced in 1995. <br />
+            <b>3.</b> JavaScript implementations may include additional features
+            beyond the ECMAScript standard, such as browser-specific APIs (e.g.,
+            DOM manipulation, AJAX). <br />
+            <b>4.</b> JavaScript is widely supported by web browsers and used
+            extensively in client-side scripting. <br />
+
+            <b>ECMAScript (ES):</b> <br />
+            <b>1.</b> ECMAScript is a standard specification for scripting
+            languages, with JavaScript being the most popular implementation of
+            this standard. <br />
+            <b>2.</b> It is maintained by Ecma International and formalized
+            through the ECMAScript Language Specification. <br />
+            <b>3.</b> ECMAScript defines the syntax, semantics, and behavior of
+            the JavaScript language. <br />
+            <b>4.</b> JavaScript implementations conform to specific versions of
+            the ECMAScript standard (e.g., ECMAScript 5, ECMAScript 6/ES2015,
+            ECMAScript 2016, etc.). <br />
+            <b>5.</b> ECMAScript provides the foundation for JavaScript and
+            serves as a reference for other scripting languages.
+            <br />
+            <b>In summary</b>, JavaScript is a specific implementation of the
+            ECMAScript standard, which defines the syntax and features of the
+            language. Other scripting languages may also conform to the
+            ECMAScript standard, but JavaScript remains the most widely used and
+            recognized implementation.
+          </p>
+        </div>
+      </li>
+    </ul>
+    <!-- ==================fourth drop================== -->
+    <ul class="drop">
+      <li>
+        <input type="radio" name="drop" id="fourth" />
+        <label for="fourth">How to write JavaScript?</label>
+        <div class="content">
+          <p>
+            Here we are going to learn four ways to write JavaScript code using these simple functions for having result(alert("here your text!");):
+            <br />
+
+            <b>1.</b> Using an HTML file with the &lt;script&gt; element. Similar to
+            CSS, JavaScript can be written inside this script tag. <br />
+            <b>2.</b> Using an external file linked with an HTML file using the same
+            &lt;script&gt; tag and including the `src` attribute. <br />
+            <b>3.</b> Using an external file and running it with the Node.js(download and install) runtime
+            environment via the terminal. <br />
+            <b>4.</b> Using a browser. Right-click, select inspect, and use the console
+            tab to write JavaScript. <br />
+
+            
+            <span style="color: red; text-align: center; display: block;"
+              >Good practice is to always write or link JavaScript at the end of
+              the HTML content, just before closing the body tag.
+              seperation of concern.
+              </span
+            >
+          </p>
+        </div>
+      </li>
+    </ul>
+    <!-- ==================fifth drop================== -->
+    <ul class="drop">
+      <li>
+        <input type="radio" name="drop" id="fifth" />
+        <label for="fifth">Print / Display Data</label>
+        <div class="content">
+          <p>
+            <b>1.</b> console.log(): This method is commonly used for debugging purposes or to print messages to the browser's console. <br>
+            <span style="color: red;">console.log("Hello, NaseebCodeStudio!");</span> <br>
+
+
+            <b>2.</b> alert(): This method displays a dialog box with a message to the user. <br>
+            <span style="color: red;">alert("Hello, NaseebCodeStudio!");</span> <br>
+
+
+            <b>3.</b> document.write(): This method writes HTML content directly to the document.<br>
+            <span style="color: red;">document.write("Hello, NaseebCodeStudio!");</span> <br>
+
+
+            <b>4.</b> innerHTML: This property sets or returns the HTML content of an element. <br>
+            <span style="color: red;">document.getElementById("output").innerHTML = "Hello, NaseebCodeStudio!";</span> <br>
+
+
+            <b>5.</b> window.print(): this method is used to print the current page. <br>
+            <span style="color: red;">window.print();</span> <br>
+            <hr>
+            <span style="color: rgb(0, 21, 255); text-align: center; display: block;"> Each of these methods has its use and should be choosen based on the specific requirements.</span>
+          </p>
+        </div>
+      </li>
+    </ul>    
+  </body>
+</html>
